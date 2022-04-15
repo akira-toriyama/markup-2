@@ -1,2 +1,5 @@
 /** @type {import('next').NextConfig} */
-module.exports = require("@bird-studio/js-config").nextConfig;
+module.exports = {
+  reactStrictMode: true,
+  pageExtensions: ["page.tsx"],
+};
