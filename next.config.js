@@ -1,5 +1,8 @@
-/** @type {import('next').NextConfig} */
-module.exports = {
-  reactStrictMode: true,
-  pageExtensions: ["page.tsx"],
-};
+import { nextConfig as conf } from "@bird-studio/js-config";
+
+/**
+ * @type {import('next').NextConfig}
+ */
+const nextConfig = conf;
+
+export default nextConfig;
