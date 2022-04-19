@@ -15,3 +15,13 @@ export const Txt = styled.p`
   @media を使用したブレイクポイントでは 1pxの違いで大きなサイズ変化があるので良くない */
   font-size: calc(1rem + 0.5vw);
 `;
+
+export const SubTitle = styled.h2`
+  /* rem ブロック要素に適している */
+  font-size: 2.5rem;
+  > strong {
+    /* em インライン要素に適している */
+    /* em 親要素のfont-sizeを基準に大きさを計算する */
+    font-size: 1.125em;
+  }
+`;
