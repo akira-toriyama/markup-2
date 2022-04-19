@@ -1,13 +1,13 @@
 import React from "react";
 import { useExample } from "./useExample";
 import type { Props } from "./Example.type";
-import classes from "./Example.module.css";
+import * as classes from "./Example.css";
 
 export const ExampleComponent: React.FC<Props> = (props) => (
   <>
     {props.isSome && <>some</>}
-    <div data-testid="Example" className={classes.txt}>
-      Example
+    <div data-testid="Example">
+      <p className={classes.txtStyle}>Example</p>
     </div>
   </>
 );
