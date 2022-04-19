@@ -1,9 +1,9 @@
-import React from "react";
+import { useState } from "react";
 import type { Props } from "./Example.type";
 
 type UseExample = () => Props;
 export const useExample: UseExample = () => {
-  const [isSome] = React.useState(true);
+  const [isSome] = useState(true);
 
   return {
     isSome,

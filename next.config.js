@@ -1,10 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
   pageExtensions: ["page.tsx"],
+  compiler: {
+    styledComponents: true,
+  },
 };
-
-module.exports =
-  require("@vanilla-extract/next-plugin").createVanillaExtractPlugin()(
-    nextConfig
-  );
