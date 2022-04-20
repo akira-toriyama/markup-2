@@ -1,10 +1,21 @@
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider, createGlobalStyle } from "styled-components";
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    max-width: 1240px;
+    margin: 0 auto;
+    font-family: 'Noto Sans Japanese', sans-serif;
+  }
+`;
 
 export const theme = {
-  fontSizes: {
-    small: "1em",
-    medium: "2em",
-    large: "3em",
+  colors: {
+    primary: "#2e5180",
+    darkGray: "#333",
+    middleGray: "#707F89",
+    gray: "#CDD6DD",
+    lightGray: "#EEF4F8",
+    white: "#fff",
   },
 } as const;
 
@@ -13,5 +24,8 @@ type Props = {
 };
 
 export const Theme: React.FC<Props> = (props) => (
-  <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
+  <ThemeProvider theme={theme}>
+    <GlobalStyle />
+    {props.children}
+  </ThemeProvider>
 );
