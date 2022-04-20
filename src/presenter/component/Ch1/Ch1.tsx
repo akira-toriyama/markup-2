@@ -1,4 +1,4 @@
-import * as S from "./styles2";
+import * as S from "./styles";
 
 export const Ch1: React.FC = () => (
   <>
