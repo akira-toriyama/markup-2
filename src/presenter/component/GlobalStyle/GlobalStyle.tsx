@@ -4,20 +4,31 @@ const GlobalStyle = createGlobalStyle`
   body {
     max-width: 1240px;
     margin: 0 auto;
-    font-family: 'Noto Sans Japanese', sans-serif;
+    font-family: "Noto Sans Japanese", sans-serif;
+  }
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  figure {
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    color: indianred;
+    text-decoration: none;
+  }
+  a:hover {
+    opacity: 0.8;
   }
 `;
 
-export const theme = {
-  colors: {
-    primary: "#2e5180",
-    darkGray: "#333",
-    middleGray: "#707F89",
-    gray: "#CDD6DD",
-    lightGray: "#EEF4F8",
-    white: "#fff",
-  },
-} as const;
+export const theme = {} as const;
 
 type Props = {
   children: React.ReactNode;

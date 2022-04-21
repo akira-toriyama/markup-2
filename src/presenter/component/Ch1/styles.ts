@@ -1,12 +1,5 @@
 import styled from "styled-components";
-import { device } from "~/presenter/component/defined";
-
-export const Header = styled.header`
-  padding: 16px 0;
-  @media ${device.desktop} {
-    padding: 20px 0;
-  }
-`;
+import { device } from "~/presenter/defined/styles";
 
 export const Hero = styled.section`
   padding: 33px 0;
