@@ -4,10 +4,7 @@ import NextLink from "next/link";
 const Page: NextPage = () => (
   <ul>
     <li>
-      <NextLink href="/ch1">ch1</NextLink>
-    </li>
-    <li>
-      <NextLink href="/example">example</NextLink>
+      <NextLink href="/ch1">App</NextLink>
     </li>
   </ul>
 );
