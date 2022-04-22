@@ -9,7 +9,7 @@ export const fontWeight = {
 
 // styled-components の themeにしても良いかも
 export const colors = {
-  primary: "#2e5180",
+  blue: "#2e5180",
   darkGray: "#333",
   middleGray: "#707F89",
   gray: "#CDD6DD",

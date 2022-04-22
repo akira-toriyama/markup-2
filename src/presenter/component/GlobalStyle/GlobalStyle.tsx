@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
   a {
-    color: indianred;
+    color: inherit;
     text-decoration: none;
   }
   a:hover {
