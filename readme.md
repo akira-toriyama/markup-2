@@ -13,4 +13,4 @@
 
 Next.js + styled-components に置き換えています。
 
-[ここ](https://markup-2.vercel.app)に公開しています。
+[ここ](https://markup-2.vercel.app/ch1)に公開しています。
