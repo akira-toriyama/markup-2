@@ -5,6 +5,7 @@ import type * as type from "./Header.type";
 import { match } from "ts-pattern";
 
 const MenuForDesktop: React.FC = () => <>desktop</>;
+
 const MenuForSP: React.FC = () => (
   <S.HamburgerMenu>
     <S.screenReader>menu</S.screenReader>
