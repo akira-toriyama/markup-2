@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 import type { AppProps } from "next/app";
 import { ErrorBoundary } from "~/presenter/component/ErrorBoundary";
 import { Theme } from "~/presenter/component/GlobalStyle";
+import { Media } from "~/presenter/context/Media";
 
 const Page: NextPage<AppProps> = (props) => (
   <>
@@ -12,7 +13,9 @@ const Page: NextPage<AppProps> = (props) => (
     </Head>
     <ErrorBoundary>
       <Theme>
-        <props.Component {...props.pageProps} />
+        <Media>
+          <props.Component {...props.pageProps} />
+        </Media>
       </Theme>
     </ErrorBoundary>
   </>

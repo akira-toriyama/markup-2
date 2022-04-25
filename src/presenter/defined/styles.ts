@@ -1,5 +1,5 @@
 export const device = {
-  desktop: `(min-width: 500px)`,
+  desktop: "(min-width: 900px)",
 } as const;
 
 export const fontWeight = {

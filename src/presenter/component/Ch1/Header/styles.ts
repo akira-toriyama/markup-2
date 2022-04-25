@@ -2,27 +2,27 @@ import styled from "styled-components";
 import * as s from "~/presenter/defined/styles";
 
 export const Header = styled.header`
-  padding-top: 16px;
-  padding-bottom: 16px;
-  @media ${s.device.desktop} {
-    padding: 20px 0;
-  }
-`;
-
-export const Container = styled.div`
   display: flex;
   align-items: center;
-  /* リキッドレイアウトpxではなくを考慮して%指定 */
-  width: 84%;
-
   /* 中央配置 */
   margin: 0 auto;
-
   /* 最後の要素だけ右寄せ */
   > * {
     &:last-child {
       margin-left: auto;
     }
+  }
+
+  /* リキッドレイアウトpxではなくを考慮して%指定 */
+  width: 84%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  @media ${s.device.desktop} {
+    /* リキッドレイアウトpxではなくを考慮して%指定 */
+    width: 91%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 100px;
   }
 `;
 
