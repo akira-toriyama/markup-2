@@ -6,29 +6,25 @@ export const Hero = styled.section`
   background-image: url("/hero.jpg");
   background-position: center;
   background-size: cover;
+
   display: flex;
+  align-items: flex-end;
 `;
 
 export const Catch = styled.div`
-  flex: auto;
-  align-self: flex-end;
-  padding: 33px 0;
+  width: 100%;
   background-color: rgba(255, 255, 255, 0.76);
+  text-align: center;
+  padding: 33px 0;
+`;
+
+export const Title = styled.h1`
+  font-size: 14px;
+  color: ${s.colors.blue};
 `;
 
 export const Img = styled.img`
   max-width: 100%;
   height: auto;
   vertical-align: bottom;
-`;
-
-export const Title = styled.h1`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-`;
-
-export const TitleInnerTxt = styled.p`
-  font-size: 14px;
-  color: ${s.colors.blue};
 `;
