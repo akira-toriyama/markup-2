@@ -1,3 +1,10 @@
-import type { State as MediaState } from "~/presenter/context/Media";
+export type PcProps = {
+  media: "pc";
+};
 
-export type Props = MediaState;
+export type SpProps = {
+  media: "sp";
+  onClick: () => undefined;
+};
+
+export type Props = PcProps | SpProps;

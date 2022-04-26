@@ -17,7 +17,7 @@ export const Header = styled.header`
   width: 84%;
   padding-top: 16px;
   padding-bottom: 16px;
-  @media ${s.device.desktop} {
+  @media ${s.device.pc} {
     /* リキッドレイアウトpxではなくを考慮して%指定 */
     width: 91%;
     padding-top: 20px;
@@ -28,16 +28,25 @@ export const Header = styled.header`
 
 export const TitleWrapper = styled.div`
   margin-left: 10px;
+  @media ${s.device.pc} {
+    margin-left: 18px;
+  }
 `;
 
 export const Title = styled.p`
   font-size: 12px;
   font-weight: ${s.fontWeight.bold};
+  @media ${s.device.pc} {
+    font-size: 20px;
+  }
 `;
 
 export const Description = styled.p`
   font-size: 10px;
   color: ${s.colors.middleGray};
+  @media ${s.device.pc} {
+    font-size: 12px;
+  }
 `;
 
 export const HamburgerMenuWrapper = styled.div`

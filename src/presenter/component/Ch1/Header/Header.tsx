@@ -4,23 +4,29 @@ import { useHeader } from "./useHeader";
 import type * as type from "./Header.type";
 import { match } from "ts-pattern";
 
-const MenuForDesktop: React.FC = () => <>desktop</>;
-
-const MenuForSP: React.FC = () => (
-  <S.HamburgerMenu>
-    <S.screenReader>menu</S.screenReader>
-  </S.HamburgerMenu>
-);
+const Logo: React.FC<type.Props> = (props) =>
+  match(props)
+    .with({ media: "pc" }, () => (
+      <NextImg src="/bb.svg" width="59" height="59" alt="bb" />
+    ))
+    .with({ media: "sp" }, () => (
+      <NextImg src="/bb.svg" width="42" height="42" alt="bb" />
+    ))
+    .exhaustive();
 
 const Menu: React.FC<type.Props> = (props) =>
   match(props)
-    .with({ media: "desktop" }, () => <MenuForDesktop />)
-    .with({ media: "sp" }, () => <MenuForSP />)
+    .with({ media: "pc" }, () => <div>wip</div>)
+    .with({ media: "sp" }, () => (
+      <S.HamburgerMenu>
+        <S.screenReader>menu</S.screenReader>
+      </S.HamburgerMenu>
+    ))
     .exhaustive();
 
 const HeaderComponent: React.FC<type.Props> = (props) => (
   <S.Header>
-    <NextImg src="/bb.svg" width="42" height="42" alt="bb" />
+    <Logo {...props} />
     <S.TitleWrapper>
       <S.Title>BBアシスタントカンパニー</S.Title>
       <S.Description>確かなスタッフによる業務サポート</S.Description>
