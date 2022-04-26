@@ -2,8 +2,6 @@ import { ThemeProvider, createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
   body {
-    max-width: 1240px;
-    margin: 0 auto;
     font-family: "Noto Sans Japanese", sans-serif;
   }
   body,

@@ -95,3 +95,27 @@ export const screenReader = styled.span`
   position: absolute;
   width: 1px;
 `;
+
+export const NavItems = styled.ul`
+  display: flex;
+  list-style: none;
+  gap: 16px;
+  align-items: center;
+`;
+
+export const NavItemTxt = styled.p`
+  font-size: 16px;
+  font-weight: ${s.fontWeight.bold};
+`;
+
+export const NavItemBtn = styled.button`
+  padding: 8px 20px;
+  background: none;
+
+  cursor: pointer;
+  color: ${s.colors.blue};
+  font-size: 16px;
+  font-weight: ${s.fontWeight.bold};
+  border: 2px solid ${s.colors.gray};
+  border-radius: 20px;
+`;

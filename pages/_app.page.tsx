@@ -5,6 +5,7 @@ import { ErrorBoundary } from "~/presenter/component/ErrorBoundary";
 import { Theme } from "~/presenter/component/GlobalStyle";
 import { Media } from "~/presenter/context/Media";
 import { CSR } from "~/presenter/component/CSR";
+import * as S from "./styles";
 
 const Page: NextPage<AppProps> = (props) => (
   <CSR>
@@ -15,7 +16,9 @@ const Page: NextPage<AppProps> = (props) => (
     <ErrorBoundary>
       <Theme>
         <Media>
-          <props.Component {...props.pageProps} />
+          <S.AppWrapper>
+            <props.Component {...props.pageProps} />
+          </S.AppWrapper>
         </Media>
       </Theme>
     </ErrorBoundary>
