@@ -18,8 +18,6 @@ export const Catch = styled.div`
   padding: 33px 0;
 `;
 
-export const Title = styled.h1``;
-
 export const TitleTxt = styled.p`
   font-size: 14px;
   color: ${s.colors.blue};
