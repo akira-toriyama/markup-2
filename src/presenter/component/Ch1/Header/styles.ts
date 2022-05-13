@@ -3,65 +3,44 @@ import * as s from "~/presenter/defined/styles";
 
 export const Header = styled.header`
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  /* 中央配置 */
-  margin: 0 auto;
-  /* 最後の要素だけ右寄せ */
-  > * {
-    &:last-child {
-      margin-left: auto;
-    }
-  }
+  height: 74px;
 
-  /* リキッドレイアウトpxではなくを考慮して%指定 */
-  width: 84%;
-  padding-top: 16px;
-  padding-bottom: 16px;
   @media ${s.device.pc} {
-    /* リキッドレイアウトpxではなくを考慮して%指定 */
-    width: 91%;
-    padding-top: 20px;
-    padding-bottom: 20px;
     height: 100px;
   }
 `;
 
-export const TitleWrapper = styled.div`
-  margin-left: 10px;
-  @media ${s.device.pc} {
-    margin-left: 18px;
-  }
+export const Site = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
-export const Title = styled.p`
+export const Logo = styled.img`
+  width: 42px;
+  margin-right: 10px;
+`;
+
+export const CorpName = styled.p`
+  color: ${s.colors.darkGray};
   font-size: 12px;
   font-weight: ${s.fontWeight.bold};
-  @media ${s.device.pc} {
-    font-size: 20px;
-  }
+  line-height: 1.4;
 `;
 
 export const Description = styled.p`
-  font-size: 10px;
   color: ${s.colors.middleGray};
-  @media ${s.device.pc} {
-    font-size: 12px;
-  }
-`;
-
-export const HamburgerMenuWrapper = styled.div`
-  display: flex;
-  justify-content: flex-end;
+  font-size: 10px;
+  line-height: 1.4;
 `;
 
 export const HamburgerMenu = styled.button`
-  /* デフォルトのpaddingがあると邪魔なので0 */
+  box-sizing: content-box;
   padding: 0;
-  /* 見た目を消す */
   outline: none;
   border: none;
   background: none;
-
   width: 20px;
   height: 14px;
   cursor: pointer;
@@ -74,18 +53,19 @@ export const HamburgerMenu = styled.button`
     height: 2px;
     background-color: currentColor;
     transform: translateY(5px);
+    transition: 0.3s ease-in-out;
   }
 
   &::before {
-    box-shadow: 0 6px currentColor;
     transform: translateY(-5px);
+    box-shadow: 0 6px currentColor;
   }
 `;
 
 /**
  * スクリーンリーダ用に中身のテキストを消す
  */
-export const screenReader = styled.span`
+export const ScreenReader = styled.span`
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -96,26 +76,28 @@ export const screenReader = styled.span`
   width: 1px;
 `;
 
-export const NavItems = styled.ul`
+export const Nav = styled.nav`
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
   display: flex;
-  list-style: none;
-  gap: 16px;
+  justify-content: center;
   align-items: center;
+  transition: left 0.5s;
 `;
 
-export const NavItemTxt = styled.p`
-  font-size: 16px;
-  font-weight: ${s.fontWeight.bold};
+export const NavItems = styled.ul`
+  display: flex;
+  align-items: center;
+  list-style: none;
+  color: #333333;
 `;
 
 export const NavItemBtn = styled.button`
-  padding: 8px 20px;
-  background: none;
-
-  cursor: pointer;
-  color: ${s.colors.blue};
-  font-size: 16px;
-  font-weight: ${s.fontWeight.bold};
-  border: 2px solid ${s.colors.gray};
-  border-radius: 20px;
+  width: 148px;
+  border-color: #cdd6dd;
 `;

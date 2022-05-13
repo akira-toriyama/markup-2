@@ -6,7 +6,6 @@ export const Hero = styled.section`
   background-image: url("/hero.jpg");
   background-position: center;
   background-size: cover;
-
   display: flex;
   align-items: flex-end;
 `;
@@ -21,6 +20,7 @@ export const Catch = styled.div`
 export const TitleTxt = styled.p`
   font-size: 14px;
   color: ${s.colors.blue};
+  line-height: 1.3;
 `;
 
 export const Img = styled.img`
