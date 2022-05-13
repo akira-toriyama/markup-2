@@ -24,11 +24,6 @@ const GlobalStyle = createGlobalStyle`
   a:hover {
     opacity: 0.8;
   }
-  header {
-    width: 84%;
-    margin: 0 auto;
-  }
-
 `;
 
 export const theme = {} as const;

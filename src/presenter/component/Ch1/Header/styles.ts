@@ -20,6 +20,11 @@ export const Site = styled.div`
 export const Logo = styled.img`
   width: 42px;
   margin-right: 10px;
+
+  @media ${s.device.pc} {
+    width: 59px;
+    margin-right: 18px;
+  }
 `;
 
 export const CorpName = styled.p`
@@ -27,12 +32,20 @@ export const CorpName = styled.p`
   font-size: 12px;
   font-weight: ${s.fontWeight.bold};
   line-height: 1.4;
+
+  @media ${s.device.pc} {
+    font-size: 20px;
+  }
 `;
 
 export const Description = styled.p`
   color: ${s.colors.middleGray};
   font-size: 10px;
   line-height: 1.4;
+
+  @media ${s.device.pc} {
+    font-size: 12px;
+  }
 `;
 
 export const HamburgerMenu = styled.button`

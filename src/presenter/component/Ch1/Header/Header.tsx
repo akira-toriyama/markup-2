@@ -10,7 +10,7 @@ const Menu: React.FC = () => (
 
 const Nav: React.FC = () => (
   <nav>
-    <S.NavItems>
+    <ul>
       <li>
         <a>会社概要</a>
       </li>
@@ -18,9 +18,9 @@ const Nav: React.FC = () => (
         <a>サービス</a>
       </li>
       <li>
-        <S.NavItemBtn>お問い合わせ</S.NavItemBtn>
+        <button type="button">お問い合わせ</button>
       </li>
-    </S.NavItems>
+    </ul>
   </nav>
 );
 
