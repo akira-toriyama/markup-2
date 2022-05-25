@@ -9,12 +9,8 @@ export type State = {
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 export const MediaContext = createContext<State>(undefined!);
 
-export const Media: React.FC<{ children: React.ReactNode }> = (props) => {
-  const ispc = useMedia(s.device.pc);
-
-  return (
-    <MediaContext.Provider value={{ media: ispc ? "pc" : "sp" }}>
-      {props.children}
-    </MediaContext.Provider>
-  );
-};
+export const Media: React.FC<{ children: React.ReactNode }> = (props) => (
+  <MediaContext.Provider value={{ media: useMedia(s.device.pc) ? "pc" : "sp" }}>
+    {props.children}
+  </MediaContext.Provider>
+);
