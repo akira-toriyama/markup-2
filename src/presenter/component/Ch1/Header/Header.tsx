@@ -2,40 +2,51 @@ import * as S from "./styles";
 import { useHeader } from "./useHeader";
 import type * as type from "./Header.type";
 
-const Menu: React.FC = () => (
-  <S.HamburgerMenu>
-    <S.ScreenReader>menu</S.ScreenReader>
-  </S.HamburgerMenu>
-);
+export const Header: React.FC = () => {
+  const state = useHeader();
+  return state.media === "pc" ? <Pc {...state} /> : <Sp />;
+};
 
-const Nav: React.FC = () => (
-  <nav>
-    <ul>
-      <li>
-        <a>会社概要</a>
-      </li>
-      <li>
-        <a>サービス</a>
-      </li>
-      <li>
-        <button type="button">お問い合わせ</button>
-      </li>
-    </ul>
-  </nav>
-);
-
-const HeaderComponent: React.FC<type.Props> = (props) => (
-  <S.Header>
+const Sp: React.FC = () => (
+  <S.HeaderForSp>
     <S.Site>
-      <S.Logo src="/bb.svg" alt="BBアシスタントカンパニー" />
+      <S.LogoForSp src="/bb.svg" alt="BBアシスタントカンパニー" />
       <div>
-        <S.CorpName>BBアシスタントカンパニー</S.CorpName>
-        <S.Description>確かなスタッフによる業務サポート</S.Description>
+        <S.CorpNameForSp>BBアシスタントカンパニー</S.CorpNameForSp>
+        <S.DescriptionForSp>
+          確かなスタッフによる業務サポート
+        </S.DescriptionForSp>
       </div>
     </S.Site>
-    {props.media === "sp" && <Menu />}
-    {props.media === "pc" && <Nav />}
-  </S.Header>
+    <S.HamburgerMenu>
+      <S.ScreenReader>menu</S.ScreenReader>
+    </S.HamburgerMenu>
+  </S.HeaderForSp>
 );
 
-export const Header: React.FC = () => <HeaderComponent {...useHeader()} />;
+const Pc: React.FC<type.LookUp<type.Props, "pc">> = () => (
+  <S.HeaderForPc>
+    <S.Site>
+      <S.LogoForPc src="/bb.svg" alt="BBアシスタントカンパニー" />
+      <div>
+        <S.CorpNameForPc>BBアシスタントカンパニー</S.CorpNameForPc>
+        <S.DescriptionForPc>
+          確かなスタッフによる業務サポート
+        </S.DescriptionForPc>
+      </div>
+    </S.Site>
+    <nav>
+      <ul>
+        <li>
+          <a>会社概要</a>
+        </li>
+        <li>
+          <a>サービス</a>
+        </li>
+        <li>
+          <button type="button">お問い合わせ</button>
+        </li>
+      </ul>
+    </nav>
+  </S.HeaderForPc>
+);

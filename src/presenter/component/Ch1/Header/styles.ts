@@ -1,15 +1,18 @@
 import styled from "styled-components";
 import * as s from "~/presenter/defined/styles";
 
-export const Header = styled.header`
+export const HeaderForSp = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 74px;
+`;
 
-  @media ${s.device.pc} {
-    height: 100px;
-  }
+export const HeaderForPc = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
 `;
 
 export const Site = styled.div`
@@ -17,35 +20,40 @@ export const Site = styled.div`
   align-items: center;
 `;
 
-export const Logo = styled.img`
+export const LogoForSp = styled.img`
   width: 42px;
   margin-right: 10px;
-
-  @media ${s.device.pc} {
-    width: 59px;
-    margin-right: 18px;
-  }
 `;
 
-export const CorpName = styled.p`
+export const LogoForPc = styled.img`
+  width: 59px;
+  margin-right: 18px;
+`;
+
+export const CorpNameForSp = styled.p`
   color: ${s.colors.darkGray};
   font-size: 12px;
   font-weight: ${s.fontWeight.bold};
   line-height: 1.4;
-
-  @media ${s.device.pc} {
-    font-size: 20px;
-  }
 `;
 
-export const Description = styled.p`
+export const CorpNameForPc = styled.p`
+  color: ${s.colors.darkGray};
+  font-size: 20px;
+  font-weight: ${s.fontWeight.bold};
+  line-height: 1.4;
+`;
+
+export const DescriptionForSp = styled.p`
   color: ${s.colors.middleGray};
   font-size: 10px;
   line-height: 1.4;
+`;
 
-  @media ${s.device.pc} {
-    font-size: 12px;
-  }
+export const DescriptionForPc = styled.p`
+  color: ${s.colors.middleGray};
+  font-size: 12px;
+  line-height: 1.4;
 `;
 
 export const HamburgerMenu = styled.button`

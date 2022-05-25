@@ -8,3 +8,7 @@ export type SpProps = {
 };
 
 export type Props = PcProps | SpProps;
+
+export type LookUp<U, T extends Props["media"]> = U extends { media: T }
+  ? U
+  : never;
