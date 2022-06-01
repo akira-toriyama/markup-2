@@ -2,6 +2,7 @@ import { Header } from "./Header";
 import { Hero } from "./Hero";
 import { Message } from "./Message";
 import { Service } from "./Service";
+import { Contact } from "./Contact";
 
 export const Ch1: React.FC = () => (
   <>
@@ -9,7 +10,7 @@ export const Ch1: React.FC = () => (
     <Hero />
     <Message />
     <Service />
-    {/* <S.Contact>Contact</S.Contact> */}
+    <Contact />
     {/* <S.Footer>Footer</S.Footer> */}
   </>
 );
