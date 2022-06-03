@@ -88,6 +88,8 @@ export const SubmitBtnForSP = styled.button`
 
 export const ContactForPc = styled.section`
   padding: 0;
+  z-index: 2;
+  position: relative;
 `;
 
 export const TextAreaForPc = styled.div`
@@ -95,6 +97,7 @@ export const TextAreaForPc = styled.div`
 `;
 
 export const WrapperForPc = styled.div`
+  width: 95%;
   margin: 0 auto;
   background-color: ${s.colors.lightGray};
   padding: 96px 9% 62px;
