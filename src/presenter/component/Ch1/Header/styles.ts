@@ -171,3 +171,32 @@ export const ContactBtnForSp = styled.a`
     opacity: 0.75;
   }
 `;
+
+export const NavItemsForPc = styled.ul`
+  display: flex;
+  align-items: center;
+  list-style: none;
+  color: #333333;
+`;
+
+export const NavItemForPc = styled.li`
+  :not(:last-child) {
+    margin-right: 23px;
+  }
+`;
+
+export const NavItemBtnPc = styled.button`
+  width: 148px;
+  border-color: #cdd6dd;
+  display: block;
+  width: 208px;
+  margin: 0 auto;
+  padding: 11px 11px 13px;
+  box-sizing: border-box;
+  border: solid 2px currentColor;
+  border-radius: 24px;
+  color: #2e5180;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+`;

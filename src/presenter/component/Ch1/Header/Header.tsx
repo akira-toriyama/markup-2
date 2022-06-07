@@ -58,17 +58,17 @@ const Pc: React.FC = () => (
       </div>
     </S.Site>
     <nav>
-      <ul>
-        <li>
+      <S.NavItemsForPc>
+        <S.NavItemForPc>
           <a>会社概要</a>
-        </li>
-        <li>
+        </S.NavItemForPc>
+        <S.NavItemForPc>
           <a>サービス</a>
-        </li>
-        <li>
-          <button type="button">お問い合わせ</button>
-        </li>
-      </ul>
+        </S.NavItemForPc>
+        <S.NavItemForPc>
+          <S.NavItemBtnPc type="button">お問い合わせ</S.NavItemBtnPc>
+        </S.NavItemForPc>
+      </S.NavItemsForPc>
     </nav>
   </S.HeaderForPc>
 );
