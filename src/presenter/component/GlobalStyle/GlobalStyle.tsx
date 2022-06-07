@@ -1,8 +1,30 @@
-import { ThemeProvider, createGlobalStyle } from "styled-components";
+import { ThemeProvider, createGlobalStyle, css } from "styled-components";
+import { useApp } from "~/presenter/hooks/useApp";
 
-const GlobalStyle = createGlobalStyle`
+type GlobalStyleProps = {
+  /**
+   * メニュー表示中は、オーバレイでスクリーンを表示する。
+   */
+  showMenu: boolean;
+};
+const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
   body {
     font-family: "Noto Sans Japanese", sans-serif;
+    ${(props) =>
+      props.showMenu &&
+      css`
+        height: 100%;
+        overflow: hidden;
+      `}
+    animation: fade 5s;
+    @keyframes fade {
+      0% {
+        opacity:0;
+      }
+      100% {
+        opacity:1;
+      }
+    }
   }
   body,
   h1,
@@ -28,13 +50,13 @@ const GlobalStyle = createGlobalStyle`
 
 export const theme = {} as const;
 
-type Props = {
+type ThemeProps = {
   children: React.ReactNode;
 };
 
-export const Theme: React.FC<Props> = (props) => (
+export const Theme: React.FC<ThemeProps> = (props) => (
   <ThemeProvider theme={theme}>
-    <GlobalStyle />
+    <GlobalStyle {...useApp()} />
     {props.children}
   </ThemeProvider>
 );

@@ -6,6 +6,10 @@ export const HeaderForSp = styled.header`
   justify-content: space-between;
   align-items: center;
   height: 74px;
+  position: relative;
+
+  width: 84%;
+  margin: 0 auto;
 `;
 
 export const HeaderForPc = styled.header`
@@ -56,7 +60,7 @@ export const DescriptionForPc = styled.p`
   line-height: 1.4;
 `;
 
-export const HamburgerMenu = styled.button`
+export const HamburgerMenu = styled.button<{ showMenu: boolean }>`
   box-sizing: content-box;
   padding: 0;
   outline: none;
@@ -65,8 +69,8 @@ export const HamburgerMenu = styled.button`
   width: 20px;
   height: 14px;
   cursor: pointer;
-  color: ${s.colors.blue};
-
+  color: ${(props) => (props.showMenu ? s.colors.white : s.colors.blue)};
+  z-index: 1;
   &::before,
   &::after {
     content: "";
@@ -109,6 +113,7 @@ export const Nav = styled.nav`
   justify-content: center;
   align-items: center;
   transition: left 0.5s;
+  z-index: 10;
 `;
 
 export const NavItems = styled.ul`
@@ -121,4 +126,48 @@ export const NavItems = styled.ul`
 export const NavItemBtn = styled.button`
   width: 148px;
   border-color: #cdd6dd;
+`;
+
+export const NavForSp = styled.nav`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: ${s.colors.white};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+`;
+
+export const NavItemsForSp = styled.ul`
+  list-style: none;
+  font-weight: bold;
+  text-align: center;
+`;
+
+export const NavItemForSp = styled.li`
+  :not(:last-child) {
+    margin-bottom: 40px;
+  }
+`;
+
+export const ContactBtnForSp = styled.a`
+  color: inherit;
+  display: block;
+  width: 208px;
+  margin: 0 auto;
+  padding: 11px 11px 13px;
+  box-sizing: border-box;
+  border: solid 2px currentColor;
+  border-radius: 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+
+  :hover {
+    opacity: 0.75;
+  }
 `;

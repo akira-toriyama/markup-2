@@ -1,10 +1,14 @@
 export type PcProps = {
   media: "pc";
+  showMenu: boolean;
 };
 
 export type SpProps = {
   media: "sp";
-  onClick: () => undefined;
+  showMenu: boolean;
+  actions: {
+    toggleMenu: () => void;
+  };
 };
 
 export type Props = PcProps | SpProps;
